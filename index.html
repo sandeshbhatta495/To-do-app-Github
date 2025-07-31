@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Todo App</title>
+  <title>To-Do App (Static)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      width: 350px;
+      width: 400px;
     }
 
     h2 {
@@ -35,23 +35,26 @@
     }
 
     button {
-      width: 100%;
       padding: 10px;
-      background-color: #2d89ef;
-      color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
     }
 
-    button:hover {
+    #submit {
+      width: 100%;
+      background-color: #2d89ef;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    #submit:hover {
       background-color: #1b63c3;
     }
 
     ul {
       list-style-type: none;
       padding: 0;
-      margin-top: 20px;
     }
 
     li {
@@ -62,38 +65,85 @@
       align-items: center;
     }
 
-    li span {
+    .task-text {
       flex: 1;
+      margin-right: 10px;
+      word-break: break-word;
+    }
+
+    .action-btns button {
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    .view-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .edit-btn {
+      background-color: #ffc107;
+      color: black;
     }
 
     .remove-btn {
       background-color: crimson;
       color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 8px;
-      cursor: pointer;
     }
 
+<<<<<<< HEAD
     .remove-btn:hover {
       background-color: aqua;
     }
     .edit-btn:hover{
       background-color: aqua;
+=======
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+>>>>>>> 3d3c6811b52cbd534da8f56353f893193428adb6
     }
   </style>
 </head>
 <body>
 
   <div class="todo-container">
-    <h2>Todo App</h2>
-    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <h2>📝 Todo App</h2>
+
+    <!-- Static input area -->
+    <input type="text" placeholder="Enter a task" />
     <button id="submit">Add Task</button>
 
+    <!-- Example Static Task List -->
     <ul id="taskList">
-
+      <li>
+        <span class="task-text">Example Task 1</span>
+        <div class="action-btns">
+          <button class="view-btn">View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="remove-btn">Delete</button>
+        </div>
+      </li>
+      <li>
+        <span class="task-text">Another Example Task</span>
+        <div class="action-btns">
+          <button class="view-btn">View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="remove-btn">Delete</button>
+        </div>
+      </li>
     </ul>
+
+    <div class="footer">
+      Enjoy your task! Best of luck with your goals. 🚀
+    </div>
   </div>
+<<<<<<< HEAD
 <script src="abc.js"></script>
+=======
+
+>>>>>>> 3d3c6811b52cbd534da8f56353f893193428adb6
 </body>
 </html>

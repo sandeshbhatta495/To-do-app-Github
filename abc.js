@@ -1,19 +1,27 @@
+const button = document.getElementById("submit");
 
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  const input = document.getElementById("taskInput");
+  const task = input.value;
+  if (!task) return;
 
-const form = document.getElementById("taskInput");
+  const li = document.createElement("li");
 
-form.addEventListener("submit",function(e){
+  li.innerHTML = `
+    <span>${task}</span>
+    <button onclick="this.parentElement.remove()">Delete</button>
+    <button onclick="editTask(this)">Edit</button>
+  `;
 
-    e.preventDefault();
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+});
 
-    const task = document.getElementById("taskInput");
-    const taskname= name.value;
-
-    const output= document.getElementById("outputArea");
-
-    output.innerText = `${task}`
-    output.innerHTML = `
-    <strong>Entered Credentials:</strong><br>
-     ${task}
-    `;
-})
+function editTask(button) {
+  const span = button.parentElement.querySelector("span");
+  const updated = prompt("Edit task:", span.textContent);
+  if (updated) {
+    span.textContent = updated;
+  }
+}

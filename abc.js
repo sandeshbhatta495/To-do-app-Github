@@ -1,22 +1,19 @@
-const button = document.getElementById("submit");
-button.addEventListener("click", function(e){
+
+
+const form = document.getElementById("taskInput");
+
+form.addEventListener("submit",function(e){
 
     e.preventDefault();
-    const input= document.getElementById("taskInput");
-    const task= input.value;
 
-    const li = document.createElement("li");
-    li.innerHTML = `
-    <span>${task}</span>
-    <button class="remove-btn" onclick="removeTask(this)">Remove</button>
-    `
+    const task = document.getElementById("taskInput");
+    const taskname= name.value;
 
-    const ulcontainer = document.getElementById("taskList");
-    ulcontainer.appendChild(li);
-    
-    input.value=``
+    const output= document.getElementById("outputArea");
+
+    output.innerText = `${task}`
+    output.innerHTML = `
+    <strong>Entered Credentials:</strong><br>
+     ${task}
+    `;
 })
-
-function removeTask(button){
-    button.parentElement.remove();
-}
